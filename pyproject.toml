@@ -1,5 +1,6 @@
 [project]
-name = "gym-asps"
+name = "gym-agro-carbon"
+packages = [{ include = "gym_agro_carbon", from = "src" }]
 version = "0.1.0"
 description = "A Gym-like environment intended to model sequential decision-making in agro sylvo pastoral systems."
 authors = [
@@ -11,7 +12,10 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy (>=2.4.0,<3.0.0)",
     "matplotlib (>=3.10.8,<4.0.0)",
-    "tqdm (>=4.67.1,<5.0.0)"
+    "tqdm (>=4.67.1,<5.0.0)",
+    "notebook (>=7.5.2,<8.0.0)",
+    "ipykernel (>=7.1.0,<8.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)"
 ]
 
 

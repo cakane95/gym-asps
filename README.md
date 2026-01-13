@@ -1,4 +1,5 @@
-# gym-agro-carbon  
+# gym-agro-carbon
+  
 ## A Gym-like Environment for Optimizing Carbon Capture in Agro-Sylvo-Pastoral Systems with Batch Sequential Decision-Making
 
 **gym-agro-carbon** is a lightweight, Gym-inspired environment designed to model **seasonal decision-making** over a **batch of agricultural parcels**. It focuses on the trade-off between **environmental sustainability** (carbon storage) and **socio-economic benefits** (agricultural yield).
@@ -26,6 +27,8 @@ To ensure algorithmic tractability and interpretability, the V1 environment reli
 * **Independence:**  In this version, plots do not interact spatially with each other.
 
 * **Soil Context:**  Each plot is assigned a fixed soil type  $s \in \{1, \dots, 8\}.$ The soil type is **observable** by the agent and **non-controllable**, remaining constant over time.
+
+* **Single Crop:** The yield $Y_t$ assumes a generic crop type for the baseline.
 
 ---
 
@@ -82,6 +85,13 @@ This environment is initially tuned to benchmark the following algorithms in a b
 
 - **UCB (Upper Confidence Bound):** Balances exploration and exploitation using confidence intervals.
 - **Thompson Sampling:** A probabilistic approach that samples from the posterior distribution of rewards.
+
+## Environment Design
+
+### Gym-like API
+We implemented gym-agro-carbon adhering to the standard OpenAI Gym (now Gymnasium) interface. The key distinction is in the step function:
+- `step(actions)`: Accepts a matrix of actions ($H \times W$) rather than a single integer.
+- `observation`: Returns a tensor containing soil types and tree states for the whole grid.
 
 ## Installation
 
