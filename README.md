@@ -125,11 +125,12 @@ src/
     │   └── regret.py
     ├── notebooks/
     │   ├── 01_smoke_grid_env.ipynb
-    │   └── 02_ucb_vs_random_smoke.ipynb       
+    │   ├── 02_ucb_vs_random_smoke.ipynb
+    │   └── 03_random_ucb_thompson.ipynb       
     └── viz/
         ├── __init__.py
-        ├── render.py          
-        └── movie.py           # generate_movie(frames, path)
+        ├── render.py          # not implemented yet
+        └── movie.py           # not yet implemented
 
 ```
 
